@@ -1,0 +1,57 @@
+body{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: rgba(14, 142, 108, 0.459);
+};
+:root {
+  /* --main-color: #f25454;
+  --bg-color: #fafafa;
+  --text-color: #282828; */
+    --main-transition: 0.4s;
+  /* --middle-transform: translate(-50%, -50%); */
+}
+@keyframes fade {
+  0% { opacity: 0 }
+  30% { opacity: 1 }
+  80% { opacity: 1 }
+  100% { opacity: 0 }
+}
+textarea{height: 9rem;}
+.alert  {
+  top: 12%;
+  text-align: center !important;
+  height: 3rem;
+  animation: fade 4s linear forwards;
+
+}
+#AlertToggler{
+z-index: 22px !important;
+}
+#profileClick{cursor: pointer;  }
+#myProfilePic,#userProfilePic{width:2.5rem; height:2.5rem}
+.card-footer {padding-bottom: 0px !important;padding-left: 0px !important;}
+#postImg{ max-height: 500px;   object-fit:contain ;aspect-ratio: 1.4 / 1; }
+.shadow-bottom {
+    box-shadow: 0px 2px 0px rgba(143, 143, 143, 0.08); 
+  }
+.alert{ z-index: 20; top: 11%;}
+/* { z-index: 55; bottom: 5%; left: 90%; cursor: pointer;} */
+#toTop {
+  cursor: pointer;
+  position: fixed;
+  z-index: 55;
+  bottom: 5%;
+  left: 90%;
+  place-self: end;
+  margin-top: calc(100vh + 50px);
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+#myProfilePic,#userProfilePic{
+  cursor: pointer;
+}
+#toTop.show {
+  opacity: 1;
+}
+
+
+@media (max-width: 576px) {.alert{ z-index: 20; top: 12%;}}
