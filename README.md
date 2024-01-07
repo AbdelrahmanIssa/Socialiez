@@ -1,9 +1,9 @@
-# Socialiez: A Dynamic Responsive Social Media Web App
+# Socialiez: A Dynamic Adabtive Social Media Web App
 ## LiveDemo 
 [Socialiez](https://aesthetic-gumdrop-f37fec.netlify.app/)
 
 ## Overview
-Socialiez is a responsive dynamic social media website built to provide users with a seamless experience across various devices. The project incorporates responsive design principles, real-time data interactions through APIs, and robust user authentication and authorization mechanisms.
+Socialiez is a adabtive dynamic social media website built to provide users with a seamless experience across various devices. The project incorporates adabtive design principles, real-time data interactions through APIs, and robust user authentication and authorization mechanisms.
 ## Technologies Used
 - HTML
 - CSS
@@ -11,9 +11,9 @@ Socialiez is a responsive dynamic social media website built to provide users wi
 - JavaScript (JS)
 - Axios
 ## Features
-1. **Responsive Design:**
-   - Ensures optimal viewing and interaction experience on devices of all sizes.
-   - UI adapts to different screen sizes for a consistent user experience.
+1. **Adabtive Design:**
+   - Ensures an optimal viewing and interaction experience on devices of all sizes.
+   - UI adapts to varying screen sizes, providing a consistent and user-friendly experience across different devices..
 
 2. **API Integration:**
    - Real-time interactions with external APIs for dynamic content updates.
