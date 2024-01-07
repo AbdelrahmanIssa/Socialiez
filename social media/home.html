@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Social Media" />
+    <title>Social Media</title>
+    <link href="images/logo.webp" rel="icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+</head>
+<body>
+
+<!-- Loader -->
+
+<div id="spinnerLoader" class="spinnerParent rounded position-fixed start-0 end-0 top-0 bottom-0 m-0 m-auto d-flex justify-content-center align-items-center" aria-label="Loading Spinner">
+<div class="lds-facebook"><div></div><div></div><div></div></div>
+</div>
+
+<!--// Loader //-->
+
+<!-- Navbar -->
+
+<div class="container-fluid shadow bgColor bg-white" aria-label="Navigation Bar">
+  <div class="col-12">
+      <nav class="bg-white navbar navbar-expand-md">
+          <div class="container-fluid">
+
+              <div class="col-3 d-flex justify-content-center ms-3 me-md-0 me-0 me-md-4">
+                  <a class="navbar-brand border border-0 d-flex align-items-center justify-content-center" id="homeLogo" href="home.html" aria-label="Home">
+                      <img id="logo" class="col-10 col-md-6" src="images/logo.webp" alt="logo">
+                  </a>
+              </div>
+
+              <button id="navBarToggler" class="navbar-toggler border border-0 bg-transparent d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <svg id="navBarTogglerSVG" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#21211A" class="bi bi-person-circle d-md-none" viewBox="0 0 16 16">
+                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                  </svg>
+              </button>
+
+              <div class="collapse navbar-collapse me-0 me-md-5 pe-0 pe-md-5" id="navbarNav">
+
+                  <!-- FOR NOT LOGGED IN USER -->
+                  <div class="d-none d-flex w-100 justify-content-end my-3 my-md-0" id="notLoggedInDiv">
+                      <button id="loginBtn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" class="btn btn-blue-greeny mx-2" aria-label="Login">Login</button>
+                      <button id="registerBtn" type="button" data-bs-toggle="modal" data-bs-target="#registerModal" class="btn btn-outline-blue-greeny" aria-label="Register">Register</button>
+                  </div>
+                  <!-- //FOR NOT LOGGED IN USER-->
+
+                  <!-- FOR LOGGED IN USER -->
+                  <div class="d-none d-flex w-100 justify-content-end align-items-start align-items-md-center flex-column flex-md-row py-2 py-md-0" id="loggedInDiv">
+                    <hr class="d-md-none border border-secondry border-1 opacity-25 col-12">
+                    <a href="home.html" class="p-2 link-dark me-3">Home</a>
+                    <hr class="d-md-none border border-secondry border-1 opacity-25 col-12"><div>
+                          <a href="#" class="moveToMyProfile" aria-label="View My Profile">
+                              <img id="myProfilePic" class="profilePic rounded-circle border border-2" src="" alt="myProfilePic">
+                          </a>
+                          <a href="#" id="navUsername" class="moveToMyProfile userNameCapitalize mx-2 py-md-0 link-dark" aria-label="My Profile"> </a>
+                      </div>
+
+                      <hr class="d-md-none border border-secondry border-1 opacity-25 col-12">
+                      <button id="logOutSubmit" type="button" class="btn btn-outline-danger mx-md-2" aria-label="Logout">Logout</button>
+                  </div>
+                  <!-- //FOR LOGGED IN USER -->
+
+              </div>
+          </div>
+      </nav>
+  </div>
+</div>
+
+<!-- //Navbar -->
+
+
+
+
+<!-- Main Content -->
+<div  class="container-fluid mt-4 px-4 ">
+  <!-- Content -->
+  <div class="row p-0 m-0 d-flex justify-content-around ">
+
+
+
+    <!-- Left Sidebar  -->
+    <aside class="col-3 d-none d-lg-block ">
+
+      
+      <div class="card sticky-top top2 py-2">
+
+
+        <div class="card-header bg-white">
+          <div class=" px-3 text-center text-dark " href="#">
+            <div class="d-flex flex-column align-items-center gap-1">
+              <a href="https://app.netlify.com/teams/abdelrahmanissa/overview" aria-label="Visit Abdelrahman Essa's Netlify profile"><img class="rounded-circle w-25 border border-3" src="images/my-pic.webp" alt="Profile picture"></a>
+              <div class=" text-center d-flex justify-content-center align-items-center text-dark m-auto w-100">
+                <a href="https://app.netlify.com/teams/abdelrahmanissa/overview" class="text-dark" aria-label="Visit Abdelrahman Essa's Netlify profile">
+                  <p class="m-0 fw-bold"> Abdelrahman Essa</p>
+                  <span>Front-End Developer</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-body">
+
+          <!-- Contact Information -->
+          <div>
+            <p class="px-1 text-secondary">Contact </p>
+
+            <!-- Github Link -->
+            <a class="d-block  px-1 py-1 mb-2 text-dark" href="https://github.com/AbdelrahmanIssa" target="_blank" aria-label="Visit Abdelrahman Essa's Github profile">
+              <div class="d-flex align-items-center gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-github"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.20-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.20-.82 2.20-.82.44 1.10.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.20 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                </svg>
+                <div class="d-flex align-items-center justify-content-between w-100">
+                  <div>
+                    <p class="m-0 fw-bold">Github profile</p>
+                    <span>Abdelrahman Essa</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!--// Github Link -->
+
+            <!-- Linkedin Link -->
+            <a class="d-block px-1 py-1 mb-2 text-dark" href="#" target="_blank" aria-label="Visit Abdelrahman Essa's Linkedin profile">
+              <div class="d-flex align-items-center gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#0A66C2" class="bi bi-linkedin "
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4" />
+                </svg>
+                <div class="d-flex align-items-center justify-content-between w-100">
+                  <div>
+                    <p class="m-0 fw-bold">Linkedin profile</p>
+                    <span>Abdelrahman Essa</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!--// Linkedin Link -->
+
+            <!-- Netlify Link -->
+            <a class="d-block px-1 py-1 mb-2 text-dark" href="https://app.netlify.com/teams/abdelrahmanissa/overview" target="_blank" aria-label="Visit Abdelrahman Essa's Netlify profile">
+              <div class="d-flex align-items-center gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                  class="bi bi-eye-fill" viewBox="0 0 16 16">
+                  <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                  <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                </svg>
+                <div>
+                  <div>
+                    <p class="m-0 fw-bold">Netlify profile</p>
+                    <span>Abdelrahman Essa</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!--// Netlify Link -->
+
+            <!-- Gmail Link -->
+            <a class="d-block  py-1 mb-2 text-dark" href="mailto:abdelrahman.eissaa@gmail.com" target="_blank" aria-label="Send an email to Abdelrahman Essa">
+              <div class="d-flex align-items-center gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="46" height="46" viewBox="0 0 48 48">
+                  <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path>
+                  <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path>
+                  <polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17">
+                  </polygon>
+                  <path fill="#c62828"
+                    d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z">
+                  </path>
+                  <path fill="#fbc02d"
+                    d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z">
+                  </path>
+                </svg>
+
+                <div>
+                  <p class=" m-0 fw-bold">Gmail</p>
+                  <span class="fa-2xs text-primary">abdelrahman.eissaa@gmail.com</span>
+                </div>
+
+              </div>
+            </a>
+            <!--// Gmail Link -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </aside>
+    <!--//Left Sidebar  -->
+
+
+
+    <!-- Main Content Area -->
+    <main class=" col-11 col-lg-6 d-lg-block">
+
+      <!-- Add New Post Section -->
+      <div id="addNewPost" class="mb-4 col-12 " aria-label="Add New Post Section">
+        <div class=" input-group mb-3 ">
+          <button data-bs-toggle="modal" data-bs-target="#addPostModal" class=" btn ps-0 border border-0" type="button"
+            id="button-addon1" aria-label="add New Post">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#1E6B6B"
+              class="bi bi-plus-circle-fill text-primary " viewBox="0 0 16 16">
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+            </svg>
+          </button>
+          <input type="text" class="form-control rounded-4" placeholder="Add your post"
+            aria-label="Example text with button addon" aria-describedby="button-addon1" data-bs-toggle="modal" data-bs-target="#addPostModal" >
+        </div>
+      </div>
+
+      <!-- Posts Section -->
+      <div id="posts" class="col-12 ">
+        </div>
+    </main>
+    <!--// Main Content Area -->
+
+
+
+
+    <!-- Right Sidebar -->
+    <aside class="col-3 d-none d-lg-block">
+      <!-- Card for Project Inspiration -->
+      <div class="card sticky-top top2">
+        <div class="card-body">
+          <h6>Project inspired by </h6>
+
+          <!-- Profile Information -->
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <!-- Yarob's Profile Link -->
+            <a href="https://sa.linkedin.com/in/yarobhm?trk=public_post_reshare-text" target="_blank" class=" text-dark" aria-label="yarob Linkedin">
+              <img id="yarobPic" class="profilePic rounded-circle" src="images/tarmeez.webp"  alt="Yarob" >
+            </a>
+            <!-- Yarob's Details -->
+            <div class="d-flex align-items-center justify-content-between w-100">
+              <a href="https://sa.linkedin.com/in/yarobhm?trk=public_post_reshare-text" target="_blank" class=" text-dark" aria-label="yarob Linkedin">
+                <p class="m-0 fw-bold">Yarob Al Mostafa</p>
+                <span>Tarmeez Academy</span>
+              </a>
+              <!-- Yarob's Linkedin Link -->
+              <a href="https://sa.linkedin.com/in/yarobhm?trk=public_post_reshare-text" target="_blank" aria-label="yarob Linkedin">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#0A66C2" class="bi bi-linkedin "
+                  viewBox="0 0 16 16">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4" />
+              </svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+
+    
+  </div>
+  <!--// Content -->
+
+</div>
+<!-- //Main Content -->
+
+
+
+
+<!--  Login   Modal     -->
+<div class="modal fade"  id="loginModal" tabindex="-1" aria-labelledby="LogIn" aria-hidden="true" >
+  
+  <div class="modal-dialog modal-dialog-centered">
+    
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="exampleModalLabel">LogIn</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div class="modal-body">
+
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Username:</label>
+            <input type="text" class="form-control" id="username">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Password:</label>
+            <input type="password" class="form-control" id="password"></input>
+          </div>
+        </form>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="loginSubmit" class="btn btn-blue-greeny" aria-label="login" >Login</button>
+        <button type="button" class="btn btn-outline-blue-greeny " aria-label="register" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+      </div>
+    
+    </div>
+
+  </div>
+
+</div>
+<!--// Login   Modal     -->
+
+
+
+
+
+
+
+
+
+<!--  Register   Modal     -->
+<div class="modal fade" id="registerModal"  tabindex="-1" aria-labelledby="Register" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="exampleModalLabel">Register</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">name:</label>
+            <input type="text" class="form-control" id="registerName"></input>
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Username:</label>
+            <input type="text" class="form-control" id="registerUsername">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Password:</label>
+            <input type="password" class="form-control" id="registerPassword"></input>
+          </div>
+          <div class="mb-3">
+            <label for="registerImage" class="form-label"> Choose image </label>
+            <input id="registerImage" type="file" class="form-control">
+          </div>
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button id="registerSubmit" type="button" class="btn btn-blue-greeny" aria-label="register" >Register</button>
+        <button type="button" class="btn btn-outline-blue-greeny " aria-label="login"  data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<!--//  Register   Modal    -->
+
+
+
+
+
+
+
+<!-- Alert of Logging In -->
+<div id="alertToggler" class=" alert alert-info col-10 col-md-6 d-none position-absolute  start-50 translate-middle-x ">
+</div>
+<!-- //Alert of Logging In -->
+
+
+
+
+
+
+
+
+
+
+<!--  Add New Post Modal   -->
+<div class="modal fade" id="addPostModal" tabindex="-1" aria-labelledby="PostModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="PostModalTitle">Add New Post</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="newPostTitle" class="form-label"> Title</label>
+            <input id="newPostTitle" type="text" placeholder="Enter post title" class="form-control">
+            <input type="hidden" id="postIdInput" value="" >
+          </div>
+          <div class="mb-3">
+            <label for="newPostBody" class="form-label"> Content</label>
+            <textarea id="newPostBody" placeholder="Enter post content" class="form-control"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="newPostImage" class="form-label"> choose image </label>
+            <input id="newPostImage" type="file" class="form-control">
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button id="addPostSubmit" type="button" class="btn btn-blue-greeny" aria-label="add Post Submit">Add a new post</button>
+        <button type="button" class="btn btn-outline-blue-greeny " data-bs-dismiss="modal"  aria-label="Close">Close</button>
+      </div>
+
+    </div>
+  
+  </div>
+</div>
+<!--// Add New Post Modal    -->
+
+
+
+
+
+
+
+
+
+<!-- Delete    -->
+<div class="modal fade" id="deletePostModal" tabindex="-1" aria-labelledby="deletePostModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content py-2">
+      
+      <div class="modal-header border-0 pt-2 my-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-0 text-center">
+        Are you Sure you want to delete this post?
+        <input type="hidden" value="" class="py-1" id="deletePostId">
+      </div>
+      <div class="modal-footer py-1 m-auto border-0">
+        <button type="button" id="ConfirmPostDelete" class="btn btn-danger py-2" aria-label="delete">Delete</button>
+        <button id="deletePost" type="button" class="btn btn-outline-blue-greeny"   data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--// Delete    -->
+
+
+
+
+
+<!-- Go to Top button with a link to the top to nav section -->
+<a href="#homeLogo"  class="border border-0 bg-transparent toTop" id="toTop" aria-label="Go to Top" ><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#1E6B6B" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+</svg></a>
+<!-- Go to Top button with a link to the top to nav section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/homeLogic.js" type="module"></script>
+
+</body>
+
+</html>
