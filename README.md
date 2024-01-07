@@ -1,6 +1,6 @@
 # Socialiez: A Multi-Responsive Social Media Website
 ## LiveDemo 
-[Overview](https://aesthetic-gumdrop-f37fec.netlify.app/)
+[Socialiez](https://aesthetic-gumdrop-f37fec.netlify.app/)
 
 ## Overview
 Socialiez is a dynamic social media website built to provide users with a seamless experience across various devices. The project incorporates responsive design principles, real-time data interactions through APIs, and robust user authentication and authorization mechanisms.
