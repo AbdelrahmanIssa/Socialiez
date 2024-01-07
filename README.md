@@ -1,6 +1,6 @@
 # Socialiez: A Dynamic Adabtive Social Media Web App
 ## LiveDemo 
-[Socialiez](https://aesthetic-gumdrop-f37fec.netlify.app/)
+[Socialiez](https://aesthetic-gumdrop-f37fec.netlify.app/](https://659b18f002b53dd162980072--incomparable-semifreddo-684867.netlify.app/)
 
 ## Overview
 Socialiez is a adabtive dynamic social media website built to provide users with a seamless experience across various devices. The project incorporates adabtive design principles, real-time data interactions through APIs, and robust user authentication and authorization mechanisms.
