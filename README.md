@@ -1,5 +1,8 @@
 # Socialiez: A Dynamic Adabtive Social Media Web App
 ## LiveDemo 
+[Socialiez Simple Presentation]()
+
+## LiveDemo 
 [Socialiez](https://65d1b1fa91a5a70aa0ec9537--coruscating-lokum-8e3109.netlify.app/)
 
 ## Overview
@@ -11,16 +14,16 @@ Socialiez is a adabtive dynamic social media website built to provide users with
 - JavaScript (JS)
 - Axios
 ## Features
-1. **Adabtive Design:**
-   - Ensures an optimal viewing and interaction experience on devices of all sizes.
-   - UI adapts to varying screen sizes, providing a consistent and user-friendly experience across different devices..
+1. **Responsive Design:**
+   - The project employs a responsive design approach using media queries to ensure a seamless user experience across various devices and screen sizes.
+   - Our website is meticulously crafted with a pixel-perfect design. Every element is precisely placed and aligned to provide a visually stunning and flawless user experience.
 
 2. **API Integration:**
    - Real-time interactions with external APIs for dynamic content updates.
    - Utilizes APIs for functionalities such as posts, user data, and authentication.
 
 3. **User Authentication and Authorization:**
-   - Secure user authentication to protect user accounts.
+   - Authentication in LogingIn-SignUp.
    - Authorization controls for different user roles, allowing specific actions based on user privileges.
 
 4. **CRUD Operations:**
