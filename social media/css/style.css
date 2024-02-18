@@ -1,0 +1,202 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e5eaf5;
+}
+
+:root {
+  --main-transition: 0.4s;
+  --main-color: #f25454;
+  --bg-color: #fafafa;
+  --text-color: #282828;
+}
+
+
+/* Loader Styles */
+/* Styles for a loading spinner */
+.spinnerParent {
+  background: rgba(128, 128, 128, 0.73);
+  z-index: 999;
+  width: 6rem;
+  height: 6rem;
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #ffffff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+/* End of Loader Styles */
+
+#homeLogo > img{ width: 12rem !important;}
+
+/* Keyframes for fade animation */
+@keyframes fade {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Additional Styles */
+.top2 {
+  top: 2rem;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.modal {
+  transition: .5s;
+  backdrop-filter: blur(1px);
+}
+
+textarea {
+  height: 9rem;
+}
+
+.alert {
+  top: 12%;
+  color: cornflowerblue;
+  text-align: center !important;
+  height: 3rem;
+  animation: fade 4s linear forwards;
+}
+
+.alert {
+  z-index: 20000;
+  top: 88% !important;
+  left: 50%;
+}
+
+.alert {
+  z-index: 22px !important;
+}
+
+.marginZero {
+  margin: 0 !important;
+}
+
+.profilePic {
+  width: 2.6rem;
+  height: 2.6rem;
+  object-fit: cover;
+}
+
+.card-footer {
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+}
+
+.imgPost, #postImg {
+  max-height: 500px;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+
+.shadow-bottom {
+  box-shadow: 0px 2px 0px rgba(143, 143, 143, 0.08);
+}
+
+.commentsNumber:hover {
+  cursor: pointer;
+  background-color: #1E6B6B !important;
+  color: white;
+  transition: color .5s, background-color 1s;
+}
+
+.toTop {
+  cursor: pointer;
+  position: fixed;
+  z-index: 55;
+  bottom: 5%;
+  left: 90%;
+  place-self: end;
+  margin-top: calc(100vh + 50px);
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.profilePic,
+.userProfilePic,
+.redirectToPostDetails,
+.editMyPost,
+.userNameCapitalize,
+.dropdown-menu {
+  cursor: pointer;
+}
+
+.userNameCapitalize {
+  text-transform: capitalize !important;
+}
+
+.toTop.show {
+  opacity: 1;
+}
+
+button, a, svg:focus {
+  outline: -webkit-focus-ring-color auto 0px !important;
+}
+
+.profileImgContainer {
+  height: 2rem !important;
+}
+
+.profileImg {
+  width: 7rem !important;
+  height: 7rem !important;
+}
+
+button, a, svg, .addCommentBtn, .editMyPost:focus-visible {
+  outline: 0 !important;
+  box-shadow: 0 0 0 0rem rgb(0 0 0 / 0%) !important;
+}
+
+.dropdown-menu {
+  inset: -3px auto auto -140PX !important;
+}
+
+button, a, svg, .addCommentBtn , input:focus {
+  outline: 0 !important;
+  border: 1 transparent !important;
+  box-shadow: 0 0 0 0rem rgb(0 0 0 / 0%) !important;
+};
+
+
