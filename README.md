@@ -3,7 +3,7 @@
 [Socialiez Simple Presentation](https://www.linkedin.com/posts/abdelrahman-essa-a4477b189_hello-everyoneits-really-exciting-for-me-activity-7164993806466072577-xitq?utm_source=share&utm_medium=member_desktop)
 
 ## LiveDemo 
-[Socialiez](https://65d1b1fa91a5a70aa0ec9537--coruscating-lokum-8e3109.netlify.app/)
+[Socialiez](https://ephemeral-moonbeam-7d7ac8.netlify.app/)
 
 ## Overview
 Socialiez is a adabtive dynamic social media website built to provide users with a seamless experience across various devices. The project incorporates adabtive design principles, real-time data interactions through APIs, and robust user authentication and authorization mechanisms.
